@@ -12,7 +12,7 @@ import java.net.Socket;
 
 import static com.messages.MessageType.CONNECTED;
 
-public class Listener implements Runnable{
+public class Listener implements Runnable {
 
     private static final String HASCONNECTED = "has connected";
 
@@ -35,6 +35,7 @@ public class Listener implements Runnable{
         Listener.picture = picture;
         this.controller = controller;
     }
+
 
     public void run() {
         try {
@@ -82,7 +83,7 @@ public class Listener implements Runnable{
                             controller.setUserList(message);
                             break;
                         default:
-                            break;
+
                     }
                 }
             }
@@ -107,8 +108,8 @@ public class Listener implements Runnable{
     }
 
     /* This method is used for sending a voice Message
- * @param msg - The message which the user generates
- */
+     * @param msg - The message which the user generates
+     */
     public static void sendVoiceMessage(byte[] audio) throws IOException {
         Message createMessage = new Message();
         createMessage.setName(username);
@@ -121,8 +122,8 @@ public class Listener implements Runnable{
     }
 
     /* This method is used for sending a normal Message
- * @param msg - The message which the user generates
- */
+     * @param msg - The message which the user generates
+     */
     public static void sendStatusUpdate(Status status) throws IOException {
         Message createMessage = new Message();
         createMessage.setName(username);

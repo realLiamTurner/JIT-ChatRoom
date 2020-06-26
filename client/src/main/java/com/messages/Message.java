@@ -5,6 +5,7 @@ import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * @version 1.0
@@ -28,5 +29,8 @@ public class Message implements Serializable {
     private byte[] voiceMsg;
     private String picture;
 
+    public void setList(HashMap<String, User> userList) {
+        this.list = new ArrayList<>(userList.values());
+    }
 
 }

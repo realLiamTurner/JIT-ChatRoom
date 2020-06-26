@@ -88,7 +88,7 @@ public class Server {
                                 changeStatus(inputmsg);
                                 break;
                             default:
-                                break;
+
                         }
                     }
                 }
