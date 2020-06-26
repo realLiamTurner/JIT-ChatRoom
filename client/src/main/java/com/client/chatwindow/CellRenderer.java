@@ -10,8 +10,15 @@ import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
 import javafx.util.Callback;
 
+
 /**
- * A Class for Rendering users images / name on the userlist.
+ * @version 1.0
+ * @ClassName CellRenderer
+ * @Author Tung
+ * @Date 2020/6/26 13:29
+ * @Description A Class for Rendering users images / name on the userlist.
+ * Website www.tunglee.ink
+ * Github www.github.com/realLiamTurner
  */
 class CellRenderer implements Callback<ListView<User>,ListCell<User>>{
         @Override

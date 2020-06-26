@@ -7,12 +7,16 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
 /**
- * @author Dominic
- * @since 16-Oct-16
- * Website: www.dominicheal.com
- * Github: www.github.com/DomHeal
+ * @version 1.0
+ * @ClassName VoiceRecorder
+ * @Author Tung
+ * @Date 2020/6/26 13:28
+ * @Description This is description of class
+ * Website www.tunglee.ink
+ * Github www.github.com/realLiamTurner
  */
 public class VoiceRecorder extends VoiceUtil {
+
 
     public static void captureAudio() {
         try {

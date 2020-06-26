@@ -1,10 +1,12 @@
 package com.messages;
-
 /**
- * @author Dominic
- * @since 03-Sep-16
- * Website: www.dominicheal.com
- * Github: www.github.com/DomHeal
+ * @version 1.0
+ * @ClassName Status
+ * @Author Tung
+ * @Date 2020/6/26 13:27
+ * @Description This is description of class
+ * Website www.tunglee.ink
+ * Github www.github.com/realLiamTurner
  */
 public enum Status {
     ONLINE, AWAY, BUSY

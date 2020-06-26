@@ -31,7 +31,13 @@ import java.util.Random;
 import java.util.ResourceBundle;
 
 /**
- *  Created by Dominic on 12-Nov-15.
+ * @version 1.0
+ * @ClassName LoginController
+ * @Author Tung
+ * @Date 2020/6/26 13:28
+ * @Description This is description of class
+ * Website www.tunglee.ink
+ * Github www.github.com/realLiamTurner
  */
 public class LoginController implements Initializable {
     @FXML private ImageView Defaultview;

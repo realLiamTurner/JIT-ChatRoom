@@ -81,6 +81,8 @@ public class Listener implements Runnable{
                         case STATUS:
                             controller.setUserList(message);
                             break;
+                        default:
+                            break;
                     }
                 }
             }

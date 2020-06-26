@@ -4,10 +4,13 @@ import javax.sound.sampled.AudioFormat;
 import java.io.ByteArrayOutputStream;
 
 /**
- * @author Dominic
- * @since 16-Oct-16
- * Website: www.dominicheal.com
- * Github: www.github.com/DomHeal
+ * @version 1.0
+ * @ClassName VoiceUtil
+ * @Author Tung
+ * @Date 2020/6/26 13:28
+ * @Description This is description of class
+ * Website www.tunglee.ink
+ * Github www.github.com/realLiamTurner
  */
 public class VoiceUtil {
     public static void setRecording(boolean flag){

@@ -44,7 +44,15 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-
+/**
+ * @version 1.0
+ * @ClassName ChatController
+ * @Author Tung
+ * @Date 2020/6/26 13:29
+ * @Description This is description of class
+ * Website www.tunglee.ink
+ * Github www.github.com/realLiamTurner
+ */
 public class ChatController implements Initializable {
 
     @FXML private TextArea messageBox;
@@ -114,8 +122,8 @@ public class ChatController implements Initializable {
                 HBox x = new HBox();
                 bl6.setBubbleSpec(BubbleSpec.FACE_LEFT_CENTER);
                 x.getChildren().addAll(profileImage, bl6);
-                logger.debug("ONLINE USERS: " + Integer.toString(msg.getUserlist().size()));
-                setOnlineLabel(Integer.toString(msg.getOnlineCount()));
+                logger.debug("ONLINE USERS: " + Integer.toString(msg.getList().size()));
+                setOnlineLabel(Integer.toString(msg.getCount()));
                 return x;
             }
         };
@@ -148,7 +156,7 @@ public class ChatController implements Initializable {
                 bl6.setBubbleSpec(BubbleSpec.FACE_RIGHT_CENTER);
                 x.getChildren().addAll(bl6, profileImage);
 
-                setOnlineLabel(Integer.toString(msg.getOnlineCount()));
+                setOnlineLabel(Integer.toString(msg.getCount()));
                 return x;
             }
         };
@@ -182,7 +190,7 @@ public class ChatController implements Initializable {
             ObservableList<User> users = FXCollections.observableList(msg.getUsers());
             userList.setItems(users);
             userList.setCellFactory(new CellRenderer());
-            setOnlineLabel(String.valueOf(msg.getUserlist().size()));
+            setOnlineLabel(String.valueOf(msg.getList().size()));
         });
         logger.info("setUserList() method Exit");
     }
@@ -271,6 +279,7 @@ public class ChatController implements Initializable {
         });
 
         statusComboBox.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
+            @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
                 try {
                     Listener.sendStatusUpdate(Status.valueOf(newValue.toUpperCase()));
@@ -304,6 +313,8 @@ public class ChatController implements Initializable {
                 break;
             case "Default":
                 this.userImageView.setImage(new Image(getClass().getClassLoader().getResource("images/default.png").toString()));
+                break;
+            default:
                 break;
         }
     }
