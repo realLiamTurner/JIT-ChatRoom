@@ -25,6 +25,7 @@ import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import javafx.util.Duration;
 
+import javax.management.DescriptorAccess;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Random;
@@ -41,8 +42,8 @@ import java.util.ResourceBundle;
  */
 public class LoginController implements Initializable {
     @FXML private ImageView Defaultview;
-    @FXML private ImageView Sarahview;
-    @FXML private ImageView Dominicview;
+    @FXML private ImageView Taoview;
+    @FXML private ImageView Tungview;
     @FXML public  TextField hostnameTextfield;
     @FXML private TextField portTextfield;
     @FXML private TextField usernameTextfield;
@@ -130,12 +131,13 @@ public class LoginController implements Initializable {
                         case "Default":
                             Defaultview.setVisible(false);
                             break;
-                        case "Dominic":
-                            Dominicview.setVisible(false);
+                        case "Tung":
+                            Tungview.setVisible(false);
                             break;
-                        case "Sarah":
-                            Sarahview.setVisible(false);
+                        case "Tao":
+                            Taoview.setVisible(false);
                             break;
+                        default:
                     }
                 }
                 if (newPicture != null) {
@@ -143,12 +145,13 @@ public class LoginController implements Initializable {
                         case "Default":
                             Defaultview.setVisible(true);
                             break;
-                        case "Dominic":
-                            Dominicview.setVisible(true);
+                        case "Tung":
+                            Tungview.setVisible(true);
                             break;
-                        case "Sarah":
-                            Sarahview.setVisible(true);
+                        case "Tao":
+                            Taoview.setVisible(true);
                             break;
+                        default:
                     }
                 }
             }
@@ -162,7 +165,7 @@ public class LoginController implements Initializable {
 
 
     /* This method is used to generate the animation on the login window, It will generate random ints to determine
-     * the size, speed, starting points and direction of each square.
+     the size, speed, starting points and direction of each square.
      */
     public void generateAnimation(){
         Random rand = new Random();
