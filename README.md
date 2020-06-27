@@ -3,7 +3,7 @@
 
 ## 登录界面
 <p align = "center">
-<img src="https://cdn.jsdelivr.net/gh/realLiamTurner/Image-Hosting-Service/JIT-Chatroom/README/login.png" />
+<img src="https://cdn.jsdelivr.net/gh/realLiamTurner/Image-Hosting-Service/JIT-Chatroom/README/login2.png" />
 </p>
 
 ## 聊天界面
