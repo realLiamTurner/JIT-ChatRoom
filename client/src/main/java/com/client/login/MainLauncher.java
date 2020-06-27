@@ -13,7 +13,7 @@ import javafx.stage.StageStyle;
  * @ClassName MainLauncher
  * @Author Tung
  * @Date 2020/6/26 13:28
- * @Description This is description of class
+ * @Description 客户端入口类
  * Website www.tunglee.ink
  * Github www.github.com/realLiamTurner
  */

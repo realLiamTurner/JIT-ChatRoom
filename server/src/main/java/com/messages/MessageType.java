@@ -5,7 +5,7 @@ package com.messages;
  * @ClassName MessageType
  * @Author Tung
  * @Date 2020/6/26 13:35
- * @Description This is description of class
+ * @Description 消息的类型
  * Website www.tunglee.ink
  * Github www.github.com/realLiamTurner
  */

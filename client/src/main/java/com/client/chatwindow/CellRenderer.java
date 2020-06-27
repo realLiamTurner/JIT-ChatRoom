@@ -16,7 +16,7 @@ import javafx.util.Callback;
  * @ClassName CellRenderer
  * @Author Tung
  * @Date 2020/6/26 13:29
- * @Description A Class for Rendering users images / name on the userlist.
+ * @Description 用于在用户列表中呈现用户图像/名称的类。
  * Website www.tunglee.ink
  * Github www.github.com/realLiamTurner
  */
@@ -41,7 +41,7 @@ class CellRenderer implements Callback<ListView<User>,ListCell<User>>{
                     statusImageView.setImage(statusImage);
 
                     ImageView pictureImageView = new ImageView();
-                    Image image = new Image(getClass().getClassLoader().getResource("images/" + user.getPicture().toLowerCase() + ".jpg").toString(),50,50,true,true);
+                    Image image = new Image(getClass().getClassLoader().getResource("images/" + user.getPicture().toLowerCase() + ".png").toString(),50,50,true,true);
                     pictureImageView.setImage(image);
 
                     hBox.getChildren().addAll(statusImageView, pictureImageView, name);

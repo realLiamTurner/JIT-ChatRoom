@@ -6,7 +6,7 @@ package com.messages;
  * @ClassName Status
  * @Author Tung
  * @Date 2020/6/26 13:35
- * @Description This is description of class
+ * @Description 在线状态的枚举类型
  * Website www.tunglee.ink
  * Github www.github.com/realLiamTurner
  */

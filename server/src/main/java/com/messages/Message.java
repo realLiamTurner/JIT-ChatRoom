@@ -12,7 +12,7 @@ import java.util.HashMap;
  * @ClassName Message
  * @Author Tung
  * @Date 2020/6/26 13:35
- * @Description This is description of class
+ * @Description 信息的model
  * Website www.tunglee.ink
  * Github www.github.com/realLiamTurner
  */

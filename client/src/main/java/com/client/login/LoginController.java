@@ -163,9 +163,13 @@ public class LoginController implements Initializable {
         }
     }
 
-
-    /* This method is used to generate the animation on the login window, It will generate random ints to determine
-     the size, speed, starting points and direction of each square.
+    /**
+     * @Author Tung
+     * @Date 2020/6/27 13:29
+     * @Description 此方法用于在登录窗口上生成动画，它将生成随机整数来确定每个正方形的大小，速度，起点和方向。
+     * @Param
+     * @Return
+     * @version 1.0
      */
     public void generateAnimation(){
         Random rand = new Random();
@@ -229,7 +233,14 @@ public class LoginController implements Initializable {
         borderPane.getChildren().add(borderPane.getChildren().size()-1,r1);
     }
 
-    /* Terminates Application */
+    /**
+     * @Author Tung
+     * @Date 2020/6/27 13:28
+     * @Description 终止申请
+     * @Param
+     * @Return
+     * @version 1.0
+     */
     public void closeSystem(){
         Platform.exit();
         System.exit(0);
@@ -239,7 +250,14 @@ public class LoginController implements Initializable {
         MainLauncher.getPrimaryStage().setIconified(true);
     }
 
-    /* This displays an alert message to the user */
+    /**
+     * @Author Tung
+     * @Date 2020/6/27 13:28
+     * @Description 向用户显示警报消息
+     * @Param
+     * @Return
+     * @version 1.0
+     */
     public void showErrorDialog(String message) {
         Platform.runLater(()-> {
             Alert alert = new Alert(Alert.AlertType.WARNING);

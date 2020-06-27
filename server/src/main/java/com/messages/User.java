@@ -9,7 +9,7 @@ import java.io.Serializable;
  * @ClassName User
  * @Author Tung
  * @Date 2020/6/26 13:35
- * @Description This is description of class
+ * @Description 用户的model
  * Website www.tunglee.ink
  * Github www.github.com/realLiamTurner
  */

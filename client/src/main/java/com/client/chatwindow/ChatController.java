@@ -206,10 +206,17 @@ public class ChatController implements Initializable {
         logger.info("setUserList() method Exit");
     }
 
-    /* Displays Notification when a user joins */
+    /**
+     * @Author Tung
+     * @Date 2020/6/27 13:31
+     * @Description 用户加入时显示通知
+     * @Param
+     * @Return
+     * @version 1.0
+     */
     public void newUserNotification(Message msg) {
         Platform.runLater(() -> {
-            Image profileImg = new Image(getClass().getClassLoader().getResource("images/" + msg.getPicture().toLowerCase() + ".jpg").toString(), 50, 50, false, false);
+            Image profileImg = new Image(getClass().getClassLoader().getResource("images/" + msg.getPicture().toLowerCase() + ".png").toString(), 50, 50, false, false);
             TrayNotification tray = new TrayNotification();
             tray.setTitle("A new user has joined!");
             tray.setMessage(msg.getName() + " has joined the JavaFX Chatroom!");
@@ -240,7 +247,14 @@ public class ChatController implements Initializable {
         System.exit(0);
     }
 
-    /* Method to display server messages */
+    /**
+     * @Author Tung
+     * @Date 2020/6/27 13:32
+     * @Description 显示服务器消息的方法
+     * @Param
+     * @Return
+     * @version 1.0
+     */
     public synchronized void addAsServer(Message msg) {
         Task<HBox> task = new Task<HBox>() {
             @Override
@@ -317,10 +331,10 @@ public class ChatController implements Initializable {
     public void setImageLabel(String selectedPicture) {
         switch (selectedPicture) {
             case "Tung":
-                this.userImageView.setImage(new Image(getClass().getClassLoader().getResource("images/Tung.jpg").toString()));
+                this.userImageView.setImage(new Image(getClass().getClassLoader().getResource("images/Tung.png").toString()));
                 break;
             case "Tao":
-                this.userImageView.setImage(new Image(getClass().getClassLoader().getResource("images/Tao.jpg").toString()));
+                this.userImageView.setImage(new Image(getClass().getClassLoader().getResource("images/Tao.png").toString()));
                 break;
             case "Default":
                 this.userImageView.setImage(new Image(getClass().getClassLoader().getResource("images/default.png").toString()));
