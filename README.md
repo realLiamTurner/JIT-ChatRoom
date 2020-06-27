@@ -2,7 +2,9 @@
 基于JavaFX的聊天室
 
 ## 登录界面
-<img src="https://cdn.jsdelivr.net/gh/realLiamTurner/Image-Hosting-Service/JIT-Chatroom/README/login.png" align = center/>
+<p align = "center">
+<img src="https://cdn.jsdelivr.net/gh/realLiamTurner/Image-Hosting-Service/JIT-Chatroom/README/login.png" />
+</p>
 
 ## 聊天界面
 ![](https://cdn.jsdelivr.net/gh/realLiamTurner/Image-Hosting-Service/JIT-Chatroom/README/chatroom.png)
