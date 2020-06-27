@@ -19,7 +19,7 @@ import java.util.HashSet;
 public class Server {
 
     /* Setting up variables */
-    private static final int PORT = 9001;
+    private static final int PORT = 9888;
     private static final HashMap<String, User> names = new HashMap<>();
     private static HashSet<ObjectOutputStream> writers = new HashSet<>();
     private static ArrayList<User> users = new ArrayList<>();
