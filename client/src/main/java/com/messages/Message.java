@@ -11,14 +11,15 @@ import java.util.HashMap;
  * @version 1.0
  * @ClassName Message
  * @Author Tung
- * @Date 2020/6/26 13:27
- * @Description This is description of class
+ * @Date 2020/6/26 13:35
+ * @Description 信息的model
  * Website www.tunglee.ink
  * Github www.github.com/realLiamTurner
  */
 @Data
 @NoArgsConstructor
 public class Message implements Serializable {
+
     private String name;
     private MessageType type;
     private String msg;

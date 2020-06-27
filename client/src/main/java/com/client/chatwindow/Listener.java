@@ -70,6 +70,7 @@ public class Listener implements Runnable {
 
                 if (message != null) {
                     logger.debug("Message recieved:" + message.getMsg() + " MessageType:" + message.getType() + "Name:" + message.getName());
+
                     switch (message.getType()) {
                         case USER:
                             controller.addToChat(message);
