@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.fxmisc.undo:undofx:1.2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../Development/4_Maven/repository/org/fxmisc/undo/undofx/1.2/undofx-1.2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../../../Development/4_Maven/repository/org/fxmisc/undo/undofx/1.2/undofx-1.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../../Development/4_Maven/repository/org/fxmisc/undo/undofx/1.2/undofx-1.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -314,7 +314,7 @@ public class ChatController implements Initializable {
             }
         });
 
-        /* Added to prevent the enter from adding a new line to inputMessageBox */
+        // 按下Enter键发送消息
         messageBox.addEventFilter(KeyEvent.KEY_PRESSED, ke -> {
             if (ke.getCode().equals(KeyCode.ENTER)) {
                 try {

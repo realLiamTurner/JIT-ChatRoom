@@ -8,8 +8,16 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-
-public class MainLauncher2 extends Application {
+/**
+ * @version 1.0
+ * @ClassName MainLauncher
+ * @Author Tung
+ * @Date 2020/6/26 13:28
+ * @Description 客户端入口类
+ * Website www.tunglee.ink
+ * Github www.github.com/realLiamTurner
+ */
+public class MainLauncher extends Application {
 
     private static Stage primaryStageObj;
 
@@ -27,7 +35,6 @@ public class MainLauncher2 extends Application {
         primaryStage.show();
         primaryStage.setOnCloseRequest(e -> Platform.exit());
     }
-
 
     public static void main(String[] args) {
         launch(args);
