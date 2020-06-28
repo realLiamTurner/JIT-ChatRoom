@@ -18,7 +18,7 @@ import java.util.HashSet;
 
 public class Server {
 
-    /* Setting up variables */
+    //设置变量
     private static final int PORT = 9888;
     private static final HashMap<String, User> names = new HashMap<>();
     private static HashSet<ObjectOutputStream> writers = new HashSet<>();

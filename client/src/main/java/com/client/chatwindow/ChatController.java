@@ -114,7 +114,7 @@ public class ChatController implements Initializable {
     public synchronized void addToChat(Message msg) {
         Task<HBox> othersMessages = new Task<HBox>() {
             @Override
-            public HBox call() throws Exception {
+            public HBox call() {
                 Image image = new Image(getClass().getClassLoader().getResource("images/" + msg.getPicture().toLowerCase() + ".jpg").toString());
                 ImageView profileImage = new ImageView(image);
                 profileImage.setFitHeight(32);
@@ -144,7 +144,7 @@ public class ChatController implements Initializable {
 
         Task<HBox> yourMessages = new Task<HBox>() {
             @Override
-            public HBox call() throws Exception {
+            public HBox call() {
                 Image image = userImageView.getImage();
                 ImageView profileImage = new ImageView(image);
                 profileImage.setFitHeight(32);
@@ -286,7 +286,7 @@ public class ChatController implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        /* Drag and Drop */
+        // 拖放
         borderPane.setOnMousePressed(event -> {
             xOffset = MainLauncher.getPrimaryStage().getX() - event.getScreenX();
             yOffset = MainLauncher.getPrimaryStage().getY() - event.getScreenY();

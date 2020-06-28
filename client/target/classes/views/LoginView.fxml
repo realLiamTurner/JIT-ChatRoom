@@ -33,9 +33,9 @@
             <Label text="Hostname: " textAlignment="CENTER" textFill="#f89406" GridPane.rowIndex="5" />
             <TextField fx:id="hostnameTextfield" prefWidth="188.0" text="localhost" GridPane.columnIndex="1" GridPane.rowIndex="5" />
             <Label text="Port: " textFill="#f89406" GridPane.rowIndex="6" />
-            <TextField fx:id="portTextfield" prefHeight="13.0" prefWidth="149.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-            <Label text="Username: " textFill="#f89406" GridPane.rowIndex="3" />
-            <TextField fx:id="usernameTextfield" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="portTextfield" prefHeight="13.0" prefWidth="149.0" text="9888" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label text="Username: " textFill="#f89406"  GridPane.rowIndex="3" />
+            <TextField fx:id="usernameTextfield" text="user"  GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <Label prefHeight="22.0" prefWidth="73.0" text="Server Details" textFill="#f89406" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <StackPane GridPane.columnIndex="1" GridPane.rowIndex="1">
                <children>

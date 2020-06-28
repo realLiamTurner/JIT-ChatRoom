@@ -15,7 +15,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.Cursor;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
@@ -25,7 +28,6 @@ import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import javafx.util.Duration;
 
-import javax.management.DescriptorAccess;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Random;
@@ -41,20 +43,28 @@ import java.util.ResourceBundle;
  * Github www.github.com/realLiamTurner
  */
 public class LoginController implements Initializable {
-    @FXML private ImageView Defaultview;
-    @FXML private ImageView Taoview;
-    @FXML private ImageView Tungview;
-    @FXML public  TextField hostnameTextfield;
-    @FXML private TextField portTextfield;
-    @FXML private TextField usernameTextfield;
-    @FXML private ChoiceBox imagePicker;
-    @FXML private Label selectedPicture;
+    @FXML
+    private ImageView Defaultview;
+    @FXML
+    private ImageView Taoview;
+    @FXML
+    private ImageView Tungview;
+    @FXML
+    public TextField hostnameTextfield;
+    @FXML
+    private TextField portTextfield;
+    @FXML
+    private TextField usernameTextfield;
+    @FXML
+    private ChoiceBox imagePicker;
+    @FXML
+    private Label selectedPicture;
     public static ChatController con;
-    @FXML private BorderPane borderPane;
+    @FXML
+    private BorderPane borderPane;
     private double xOffset;
     private double yOffset;
     private Scene scene;
-
     private static LoginController instance;
 
     public LoginController() {
@@ -64,12 +74,23 @@ public class LoginController implements Initializable {
     public static LoginController getInstance() {
         return instance;
     }
+
+    /**
+     * @Author Tung
+     * @Date 2020/6/28 10:41
+     * @Description 登录窗口的按钮操作
+     * @Param  * 参数
+     * @Return void
+     * @version 1.0
+     */
     public void loginButtonAction() throws IOException {
+        // 获取登陆面板各项的内容
         String hostname = hostnameTextfield.getText();
         int port = Integer.parseInt(portTextfield.getText());
         String username = usernameTextfield.getText();
         String picture = selectedPicture.getText();
 
+        // 加载用于渲染聊天界面的ui文件
         FXMLLoader fmxlLoader = new FXMLLoader(getClass().getResource("/views/ChatView.fxml"));
         Parent window = (Pane) fmxlLoader.load();
         con = fmxlLoader.<ChatController>getController();
@@ -106,7 +127,7 @@ public class LoginController implements Initializable {
         selectedPicture.textProperty().bind(imagePicker.getSelectionModel().selectedItemProperty());
         selectedPicture.setVisible(false);
 
-        /* Drag and Drop */
+        // 拖放
         borderPane.setOnMousePressed(event -> {
             xOffset = MainLauncher.getPrimaryStage().getX() - event.getScreenX();
             yOffset = MainLauncher.getPrimaryStage().getY() - event.getScreenY();
@@ -123,41 +144,38 @@ public class LoginController implements Initializable {
             borderPane.setCursor(Cursor.DEFAULT);
         });
 
-        imagePicker.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
-            @Override
-            public void changed(ObservableValue<? extends String> selected, String oldPicture, String newPicture) {
-                if (oldPicture != null) {
-                    switch (oldPicture) {
-                        case "Default":
-                            Defaultview.setVisible(false);
-                            break;
-                        case "Tung":
-                            Tungview.setVisible(false);
-                            break;
-                        case "Tao":
-                            Taoview.setVisible(false);
-                            break;
-                        default:
-                    }
+        imagePicker.getSelectionModel().selectedItemProperty().addListener((ChangeListener<String>) (selected, oldPicture, newPicture) -> {
+            if (oldPicture != null) {
+                switch (oldPicture) {
+                    case "Default":
+                        Defaultview.setVisible(false);
+                        break;
+                    case "Tung":
+                        Tungview.setVisible(false);
+                        break;
+                    case "Tao":
+                        Taoview.setVisible(false);
+                        break;
+                    default:
                 }
-                if (newPicture != null) {
-                    switch (newPicture) {
-                        case "Default":
-                            Defaultview.setVisible(true);
-                            break;
-                        case "Tung":
-                            Tungview.setVisible(true);
-                            break;
-                        case "Tao":
-                            Taoview.setVisible(true);
-                            break;
-                        default:
-                    }
+            }
+            if (newPicture != null) {
+                switch (newPicture) {
+                    case "Default":
+                        Defaultview.setVisible(true);
+                        break;
+                    case "Tung":
+                        Tungview.setVisible(true);
+                        break;
+                    case "Tao":
+                        Taoview.setVisible(true);
+                        break;
+                    default:
                 }
             }
         });
         int numberOfSquares = 30;
-        while (numberOfSquares > 0){
+        while (numberOfSquares > 0) {
             generateAnimation();
             numberOfSquares--;
         }
@@ -171,7 +189,7 @@ public class LoginController implements Initializable {
      * @Return
      * @version 1.0
      */
-    public void generateAnimation(){
+    public void generateAnimation() {
         Random rand = new Random();
         int sizeOfSqaure = rand.nextInt(50) + 1;
         int speedOfSqaure = rand.nextInt(10) + 5;
@@ -183,38 +201,34 @@ public class LoginController implements Initializable {
         KeyValue moveYAxis = null;
         Rectangle r1 = null;
 
-        switch (direction){
-            case 1 :
-                // MOVE LEFT TO RIGHT
-                r1 = new Rectangle(0,startYPoint,sizeOfSqaure,sizeOfSqaure);
-                moveXAxis = new KeyValue(r1.xProperty(), 350 -  sizeOfSqaure);
+        switch (direction) {
+            case 1:
+                // 从左向右移动
+                r1 = new Rectangle(0, startYPoint, sizeOfSqaure, sizeOfSqaure);
+                moveXAxis = new KeyValue(r1.xProperty(), 350 - sizeOfSqaure);
                 break;
-            case 2 :
-                // MOVE TOP TO BOTTOM
-                r1 = new Rectangle(startXPoint,0,sizeOfSqaure,sizeOfSqaure);
+            case 2:
+                // 移至底部
+                r1 = new Rectangle(startXPoint, 0, sizeOfSqaure, sizeOfSqaure);
                 moveYAxis = new KeyValue(r1.yProperty(), 420 - sizeOfSqaure);
                 break;
-            case 3 :
-                // MOVE LEFT TO RIGHT, TOP TO BOTTOM
-                r1 = new Rectangle(startXPoint,0,sizeOfSqaure,sizeOfSqaure);
-                moveXAxis = new KeyValue(r1.xProperty(), 350 -  sizeOfSqaure);
+            case 3:
+            case 6:
+                // 左移，右移
+                // 从左到右，从上到下
+                r1 = new Rectangle(startXPoint, 0, sizeOfSqaure, sizeOfSqaure);
+                moveXAxis = new KeyValue(r1.xProperty(), 350 - sizeOfSqaure);
                 moveYAxis = new KeyValue(r1.yProperty(), 420 - sizeOfSqaure);
                 break;
-            case 4 :
-                // MOVE BOTTOM TO TOP
-                r1 = new Rectangle(startXPoint,420-sizeOfSqaure ,sizeOfSqaure,sizeOfSqaure);
+            case 4:
+                // 从下往上移动
+                r1 = new Rectangle(startXPoint, 420 - sizeOfSqaure, sizeOfSqaure, sizeOfSqaure);
                 moveYAxis = new KeyValue(r1.xProperty(), 0);
                 break;
-            case 5 :
-                // MOVE RIGHT TO LEFT
-                r1 = new Rectangle(420-sizeOfSqaure,startYPoint,sizeOfSqaure,sizeOfSqaure);
+            case 5:
+                // 向左移动
+                r1 = new Rectangle(420 - sizeOfSqaure, startYPoint, sizeOfSqaure, sizeOfSqaure);
                 moveXAxis = new KeyValue(r1.xProperty(), 0);
-                break;
-            case 6 :
-                //MOVE RIGHT TO LEFT, BOTTOM TO TOP
-                r1 = new Rectangle(startXPoint,0,sizeOfSqaure,sizeOfSqaure);
-                moveXAxis = new KeyValue(r1.xProperty(), 350 -  sizeOfSqaure);
-                moveYAxis = new KeyValue(r1.yProperty(), 420 - sizeOfSqaure);
                 break;
 
             default:
@@ -230,7 +244,7 @@ public class LoginController implements Initializable {
         timeline.setAutoReverse(true);
         timeline.getKeyFrames().add(keyFrame);
         timeline.play();
-        borderPane.getChildren().add(borderPane.getChildren().size()-1,r1);
+        borderPane.getChildren().add(borderPane.getChildren().size() - 1, r1);
     }
 
     /**
@@ -241,12 +255,12 @@ public class LoginController implements Initializable {
      * @Return
      * @version 1.0
      */
-    public void closeSystem(){
+    public void closeSystem() {
         Platform.exit();
         System.exit(0);
     }
 
-    public void minimizeWindow(){
+    public void minimizeWindow() {
         MainLauncher.getPrimaryStage().setIconified(true);
     }
 
@@ -259,11 +273,11 @@ public class LoginController implements Initializable {
      * @version 1.0
      */
     public void showErrorDialog(String message) {
-        Platform.runLater(()-> {
+        Platform.runLater(() -> {
             Alert alert = new Alert(Alert.AlertType.WARNING);
-            alert.setTitle("Warning!");
+            alert.setTitle("警告!");
             alert.setHeaderText(message);
-            alert.setContentText("Please check for firewall issues and check if the server is running.");
+            alert.setContentText("请检查防火墙问题，并检查服务器是否正在运行.");
             alert.showAndWait();
         });
 
