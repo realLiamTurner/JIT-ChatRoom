@@ -38,7 +38,7 @@ import java.util.ResourceBundle;
  * @ClassName LoginController
  * @Author Tung
  * @Date 2020/6/26 13:28
- * @Description This is description of class
+ * @Description 处理登录界面的逻辑
  * Website www.tunglee.ink
  * Github www.github.com/realLiamTurner
  */
