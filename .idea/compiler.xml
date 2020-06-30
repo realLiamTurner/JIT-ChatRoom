@@ -7,7 +7,6 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="client (1)" />
         <module name="client" />
         <module name="server" />
         <module name="ChatRoom" />
@@ -17,6 +16,7 @@
       <module name="ChatRoom" target="1.8" />
       <module name="client" target="1.8" />
       <module name="client (1)" target="1.8" />
+      <module name="client (2)" target="1.8" />
       <module name="server" target="1.8" />
     </bytecodeTargetLevel>
   </component>

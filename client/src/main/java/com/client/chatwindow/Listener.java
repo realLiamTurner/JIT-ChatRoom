@@ -17,7 +17,7 @@ import static com.messages.MessageType.CONNECTED;
  * @ClassName Listener
  * @Author Tung
  * @Date 2020/6/27 13:37
- * @Description 监听类
+ * @Description 侦听有无消息发出和用户连接
  * Website www.tunglee.ink
  * Github www.github.com/realLiamTurner
  */
@@ -146,7 +146,7 @@ public class Listener implements Runnable {
     /**
      * @Author Tung
      * @Date 2020/6/27 13:48
-     * @Description 此方法用于发送普通邮件
+     * @Description 此方法用于侦听在线状态
      * @Param * 参数 status
      * @Return void
      * @version 1.0
@@ -164,7 +164,7 @@ public class Listener implements Runnable {
     /**
      * @Author Tung
      * @Date 2020/6/27 13:51
-     * @Description 此方法用于连接
+     * @Description 此方法用于侦听连接
      * @Param * 参数
      * @Return void
      * @version 1.0

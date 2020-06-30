@@ -1,6 +1,5 @@
 package com.messages;
 
-
 /**
  * @version 1.0
  * @ClassName Status

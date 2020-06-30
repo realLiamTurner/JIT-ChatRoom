@@ -49,7 +49,7 @@ import java.util.ResourceBundle;
  * @ClassName ChatController
  * @Author Tung
  * @Date 2020/6/26 13:29
- * @Description This is description of class
+ * @Description 聊天面板的交互逻辑处理
  * Website www.tunglee.ink
  * Github www.github.com/realLiamTurner
  */

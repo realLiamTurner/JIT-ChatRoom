@@ -1,7 +1,7 @@
 # Login
 ## MainLauncher.java
 此类继承javafx.application.Application抽象类,并实例化它的抽象方法start().
-Application类是JavaFX应用的入口,通过在start()方法中实现图形界面的全部代码.
+Application类是JavaFX应用的入口,通过在start()方法中实现UI控件的布局.
 
 在main()方法中,调用launch()方法来启动应用.
 
