@@ -12,10 +12,9 @@
 </p>
 
 ## 使用
-1. 先启动com.server.Server下的main()方法
 
-### 服务端入口
-com.server.Server类
+### 1. 服务端入口
+先启动com.server.Server下的main()方法
 ``` java
 public static void main(String[] args) throws Exception {
     logger.info("The chat server is running.");
@@ -33,18 +32,19 @@ public static void main(String[] args) throws Exception {
 }
 ```
 
-2. 再启动com.client.login.MainLauncher下的main()方法
 
-### 客户端入口
-com.client.login.MainLauncher类
+### 2. 客户端入口
+
+再启动com.client.login.MainLauncher下的main()方法
 ``` java
 public static void main(String[] args) {
         launch(args);
     }
 ```
 
-3. 如果端口被占用了,修改com.server.Server类下面的PORT的值即可:
+### 3. 端口占用
 
+如果端口被占用了,修改com.server.Server类下面的PORT的值即可:
 ``` java
 private static final int PORT = 9888;
 ```
