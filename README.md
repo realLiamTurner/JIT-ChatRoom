@@ -7,7 +7,9 @@
 </p>
 
 ## 聊天界面
-![](https://cdn.jsdelivr.net/gh/realLiamTurner/Image-Hosting-Service/JIT-Chatroom/README/chatroom.png)
+<p align = "center">
+<img src="https://cdn.jsdelivr.net/gh/realLiamTurner/Image-Hosting-Service/JIT-Chatroom/README/ChatRoom.png"/>
+</p>
 
 ## 使用
 1. 先启动com.server.Server下的main()方法
